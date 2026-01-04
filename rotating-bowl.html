@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangkok Berputar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .bowl-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto 40px;
+            perspective: 1000px;
+        }
+
+        .bowl-wrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .bowl-wrapper.rotating {
+            animation: rotate 4s linear infinite;
+        }
+
+        .bowl-wrapper.paused {
+            animation-play-state: paused;
+        }
+
+        .bowl-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        .controls {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-start {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-start:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-stop {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .btn-stop:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-reverse {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .btn-reverse:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .speed-control {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .speed-control label {
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        input[type="range"] {
+            width: 300px;
+            height: 8px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.3);
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            border: none;
+        }
+
+        .speed-value {
+            color: white;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .bowl-container {
+                width: 300px;
+                height: 300px;
+            }
+
+            button {
+                padding: 12px 30px;
+                font-size: 1em;
+            }
+
+            input[type="range"] {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🥟 Mangkok Berputar 🥟</h1>
+
+        <div class="bowl-container">
+            <div class="bowl-wrapper" id="bowlWrapper">
+                <img src="img cover 2.png?v=clean" alt="Piring Makanan" class="bowl-image">
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn-start" onclick="startRotation()">▶ Mulai</button>
+            <button class="btn-stop" onclick="stopRotation()">⏸ Berhenti</button>
+            <button class="btn-reverse" onclick="reverseRotation()">🔄 Balik Arah</button>
+        </div>
+
+        <div class="speed-control">
+            <label for="speedRange">Kecepatan Putaran:</label>
+            <input type="range" id="speedRange" min="1" max="10" value="4" step="0.5">
+            <div class="speed-value">Kecepatan: <span id="speedValue">4</span>s</div>
+        </div>
+    </div>
+
+    <script>
+        const bowlWrapper = document.getElementById('bowlWrapper');
+        const speedRange = document.getElementById('speedRange');
+        const speedValue = document.getElementById('speedValue');
+        let isReversed = false;
+
+        function startRotation() {
+            bowlWrapper.classList.add('rotating');
+            bowlWrapper.classList.remove('paused');
+        }
+
+        function stopRotation() {
+            bowlWrapper.classList.remove('rotating');
+        }
+
+        function reverseRotation() {
+            isReversed = !isReversed;
+            if (isReversed) {
+                bowlWrapper.style.animationDirection = 'reverse';
+            } else {
+                bowlWrapper.style.animationDirection = 'normal';
+            }
+        }
+
+        speedRange.addEventListener('input', function () {
+            const speed = this.value;
+            speedValue.textContent = speed;
+            bowlWrapper.style.animationDuration = speed + 's';
+        });
+
+        // Mulai rotasi otomatis saat halaman dimuat
+        window.addEventListener('load', function () {
+            startRotation();
+        });
+    </script>
+</body>
+
+</html>

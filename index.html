@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luscious - Delicious Food Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Section 1: Navbar + Hero -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <img src="logo secte.png" alt="Luscious Logo">
+                    </div>
+                    <ul class="nav-menu">
+                        <li><a href="#ayampop">Ayam Pop</a></li>
+                        <li><a href="#menu">Food Menu</a></li>
+                        <li><a href="#order">Order Now</a></li>
+                    </ul>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="btn-whatsapp">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <h1 class="hero-title">
+                            <span class="title-line">Take a taste</span>
+                            <span class="title-line">This is Ayam Pop.</span>
+                        </h1>
+                        <p class="hero-subtitle">Everyday comfort, done right.</p>
+                        <p class="hero-description">
+                            Berada di Blok M Hub, Secte* Ayam Pop mengolah ayam pop dengan pendekatan modern tanpa menghilangkan karakter rasa.
+Pilihan pas untuk mengisi hari baik di sela kesibukan maupun saat ingin makan dengan tenang.
+                        </p>
+                        <button class="btn-primary">Explore Now</button>
+                    </div>
+                    <div class="hero-right">
+                        <div class="hero-image-wrapper">
+                            <img src="Secte Ayam Pop.jpg" alt="Delicious Dumplings" class="hero-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- Section 2: What's on our Plate -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What's on our Plate</h2>
+                <p class="section-subtitle">Please serve yourself without any hesitate</p>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="appetizers">Appetizers</button>
+                <button class="tab-btn" data-tab="main-dish">Main Dish</button>
+                <button class="tab-btn" data-tab="dessert">Dessert</button>
+                <span class="tab-indicator"></span>
+            </div>
+
+            <div class="tab-content active" id="appetizers">
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="Secte Burger.png" alt="Burger" class="menu-image">
+                        </div>
+                        <h3 class="menu-name">Burger</h3>
+                        <p class="menu-description">This might be the most common Chinese family dish. The dish is easy to cook, fry the stirred egg and sliced tomato.</p>
+                        <a href="#order" class="menu-link">Order Now →</a>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="Secte Piring.png" alt="Special Piring" class="menu-image">
+                        </div>
+                        <h3 class="menu-name">Special Piring</h3>
+                        <p class="menu-description">When temperature gourmet pea garlic creating something warm and cozy, you can't go wrong with fluffy.</p>
+                        <a href="#order" class="menu-link">Order Now →</a>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="Secte Spaghetti.png" alt="Spaghetti" class="menu-image">
+                        </div>
+                        <h3 class="menu-name">Spaghetti</h3>
+                        <p class="menu-description">Sweet and sour dishes are popular among Chinese families. Although the ingredients and cooking methods.</p>
+                        <a href="#order" class="menu-link">Order Now →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="main-dish">
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=400&fit=crop" alt="Beef Noodles" class="menu-image">
+                        </div>
+                        <h3 class="menu-name">Beef Noodles</h3>
+                        <p class="menu-description">Slow-braised beef in rich broth served over fresh hand-pulled noodles.</p>
+                        <a href="#order" class="menu-link">Order Now →</a>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=400&fit=crop" alt="Fried Rice" class="menu-image">
+                        </div>
+                        <h3 class="menu-name">Special Fried Rice</h3>
+                        <p class="menu-description">Wok-fried rice with eggs, vegetables, and choice of protein in aromatic seasonings.</p>
+                        <a href="#order" class="menu-link">Order Now →</a>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1512003867696-6d5ce6835040?w=400&h=400&fit=crop" alt="Steamed Fish" class="menu-image">
+                        </div>
+                        <h3 class="menu-name">Steamed Fish</h3>
+                        <p class="menu-description">Fresh fish steamed to perfection with ginger, soy sauce, and spring onions.</p>
+                        <a href="#order" class="menu-link">Order Now →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="dessert">
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=400&fit=crop" alt="Mango Pudding" class="menu-image">
+                        </div>
+                        <h3 class="menu-name">Mango Pudding</h3>
+                        <p class="menu-description">Silky smooth mango pudding made with fresh mangoes and coconut cream.</p>
+                        <a href="#order" class="menu-link">Order Now →</a>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1562440499-64c9a4a2583e?w=400&h=400&fit=crop" alt="Sesame Balls" class="menu-image">
+                        </div>
+                        <h3 class="menu-name">Sesame Balls</h3>
+                        <p class="menu-description">Crispy fried glutinous rice balls coated with sesame seeds and sweet filling.</p>
+                        <a href="#order" class="menu-link">Order Now →</a>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=400&fit=crop" alt="Red Bean Soup" class="menu-image">
+                        </div>
+                        <h3 class="menu-name">Red Bean Soup</h3>
+                        <p class="menu-description">Warm sweet red bean soup with a hint of orange peel and rock sugar.</p>
+                        <a href="#order" class="menu-link">Order Now →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Testimonial -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="testimonial-content">
+                <div class="testimonial-left">
+                    <img src="secte cover2.png" alt="Pasta Dish" class="testimonial-image">
+                </div>
+                <div class="testimonial-right">
+                    <h2 class="testimonial-title">Let's see what other says</h2>
+
+                    <div class="testimonial-slider">
+                        <div class="testimonial-item active" data-testimonial="1">
+                            <p class="testimonial-text">
+                                "I'm currently on the tour with Paula Abdul and while we were performing in town I came across your raw chocolate fudge at Whole Foods. OMG!!! I was nice enough to share it with Paula Abdul, the Physical therapist and the glam squad. Of course they all agreed with me! So glad we are coming back for 2 or 3 week."
+                            </p>
+                        </div>
+                        <div class="testimonial-item" data-testimonial="2">
+                            <p class="testimonial-text">
+                                "Best Asian restaurant in town! The kung pao chicken is my go-to dish.
+                                The service is excellent, and the portions are generous. Highly recommend
+                                trying their handmade noodles - they're simply amazing!"
+                            </p>
+                        </div>
+                        <div class="testimonial-item" data-testimonial="3">
+                            <p class="testimonial-text">
+                                "A hidden gem! The flavors are authentic and remind me of home cooking.
+                                The staff is friendly and attentive. Whether dining in or taking out,
+                                the food quality is always consistent and delicious."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-controls">
+                        <div class="testimonial-avatars">
+                            <button class="avatar active" data-testimonial="1">
+                                <img src="https://i.pravatar.cc/150?img=1" alt="Customer 1">
+                            </button>
+                            <button class="avatar" data-testimonial="2">
+                                <img src="https://i.pravatar.cc/150?img=2" alt="Customer 2">
+                            </button>
+                            <button class="avatar" data-testimonial="3">
+                                <img src="https://i.pravatar.cc/150?img=3" alt="Customer 3">
+                            </button>
+                        </div>
+                        <div class="testimonial-dots">
+                            <span class="dot active" data-testimonial="1"></span>
+                            <span class="dot" data-testimonial="2"></span>
+                            <span class="dot" data-testimonial="3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Newsletter + Footer -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2 class="newsletter-title">Easy recipes will send to your inbox</h2>
+            <p class="newsletter-subtitle">Get weekly updates on the newest chinese receipes in your mailbox!</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" class="newsletter-input" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">Get Cooking</h3>
+                    <ul class="footer-links">
+                        <li><a href="#recipes">Recipes</a></li>
+                        <li><a href="#cooking-tips">Cooking Tips</a></li>
+                        <li><a href="#ingredients">Ingredients Guide</a></li>
+                        <li><a href="#video-tutorials">Video Tutorials</a></li>
+                        <li><a href="#meal-plans">Meal Plans</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#locations">Our Locations</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#instagram">Instagram</a></li>
+                        <li><a href="#facebook">Facebook</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#youtube">YouTube</a></li>
+                        <li><a href="#pinterest">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Luscious. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
