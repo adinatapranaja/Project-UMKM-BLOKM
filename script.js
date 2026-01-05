@@ -206,8 +206,12 @@ newsletterForm.addEventListener('submit', (e) => {
     const email = newsletterInput.value;
 
     if (email) {
-        // Show success message (you can customize this)
-        alert(`Thank you for subscribing! We'll send recipes to ${email}`);
+        // Send to secte.community@gmail.com
+        const mailtoLink = `mailto:secte.community@gmail.com?subject=Newsletter Subscription&body=Email: ${encodeURIComponent(email)}`;
+        window.location.href = mailtoLink;
+        
+        // Show success message
+        alert(`Thank you for subscribing! Subscription request will be sent to secte.community@gmail.com`);
         newsletterInput.value = '';
     }
 });

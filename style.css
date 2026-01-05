@@ -656,6 +656,13 @@ body {
     margin-bottom: 12px;
 }
 
+.menu-price {
+    color: var(--orange-primary);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
 .menu-description {
     color: var(--text-gray);
     margin-bottom: 16px;
