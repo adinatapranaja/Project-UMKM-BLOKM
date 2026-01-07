@@ -169,19 +169,23 @@ function initializeReviewCarousel(totalReviews) {
     function showReview(index) {
         const items = document.querySelectorAll('#reviewsContainer .testimonial-item');
         
+        // Remove active class from all items first
         items.forEach(item => item.classList.remove('active'));
         avatars.forEach(avatar => avatar.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
 
-        const selectedItem = document.querySelector(`#reviewsContainer .testimonial-item[data-testimonial="${index}"]`);
-        const selectedAvatar = document.querySelector(`#reviewsAvatars .avatar[data-testimonial="${index}"]`);
-        const selectedDot = document.querySelector(`#reviewsDots .dot[data-testimonial="${index}"]`);
+        // Wait for fade out animation to complete before showing new item
+        setTimeout(() => {
+            const selectedItem = document.querySelector(`#reviewsContainer .testimonial-item[data-testimonial="${index}"]`);
+            const selectedAvatar = document.querySelector(`#reviewsAvatars .avatar[data-testimonial="${index}"]`);
+            const selectedDot = document.querySelector(`#reviewsDots .dot[data-testimonial="${index}"]`);
 
-        if (selectedItem) selectedItem.classList.add('active');
-        if (selectedAvatar) selectedAvatar.classList.add('active');
-        if (selectedDot) selectedDot.classList.add('active');
+            if (selectedItem) selectedItem.classList.add('active');
+            if (selectedAvatar) selectedAvatar.classList.add('active');
+            if (selectedDot) selectedDot.classList.add('active');
 
-        currentReview = index;
+            currentReview = index;
+        }, 100); // Small delay to ensure smooth transition
     }
 
     // Auto-slide
