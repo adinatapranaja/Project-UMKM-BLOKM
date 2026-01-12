@@ -1123,72 +1123,79 @@ img {
 
     /* Navbar */
     .navbar {
-        height: 100px;
+        height: 100px !important;
+        /* Kembali ke ukuran normal */
+        padding: 0;
+        overflow: visible !important;
+        /* IZINKAN logo keluar batas */
+        position: relative;
     }
 
     .nav-content {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        position: relative;
     }
 
     .menu-toggle {
         display: flex !important;
         order: 1;
         margin-right: auto;
+        margin-left: -300px;
+        /* Geser ke kiri */
     }
 
     /* Tampilkan item khusus mobile di menu */
     .mobile-only-item {
         display: block;
         margin-top: 20px;
-        /* Jarak agar tidak terlalu dempet */
-    }
-
-    /* WhatsApp button mobile - icondari bulat hijau */
-    .btn-whatsapp-mobile {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        background: #25D366;
-        border-radius: 50%;
-        padding: 12px;
-        order: 3;
-        margin-left: auto;
-        transition: all 0.3s ease;
-        box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3);
-    }
-
-    .btn-whatsapp-mobile:hover {
-        background: #20BA5A;
-        transform: scale(1.1);
-        box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-    }
-
-    .btn-whatsapp-mobile svg {
-        fill: white;
     }
 
     .logo {
         order: 2;
         flex-shrink: 0;
         margin-right: -70px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        /* Penting untuk centering */
+        overflow: visible !important;
     }
 
     .logo img {
-        height: 300px;
+        height: 600px !important;
+        /* UKURAN BESAR */
+        width: auto !important;
+        max-width: none !important;
         margin-right: 0;
+        object-fit: contain;
+
+        /* TEKNIK 'NONGOL' & GESER KIRI */
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 200px);
+        /* Geser titik tengah ke kiri 130px (100px + kompensasi) */
+        transform: translate(-50%, -50%);
+        /* Tetap center relative terhadap titik 'left' baru */
+        margin-left: 0;
+        /* Reset margin */
+        z-index: 1001;
+        /* Di atas segalanya */
     }
 
     .nav-menu {
         position: fixed;
         top: 100px;
         left: -100% !important;
-        /* HIDDEN - harus diklik hamburger dulu */
-        width: 100%;
+        right: 100% !important;
+        width: 100% !important;
         height: calc(100vh - 100px);
+        margin: 0 !important;
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         flex-direction: column;
@@ -1199,12 +1206,13 @@ img {
         transition: left 0.3s ease;
         box-shadow: 0 5px 15px var(--shadow);
         order: 3;
-        margin-right: 0;
         visibility: hidden;
+        z-index: 999;
     }
 
     .nav-menu.active {
         left: 0 !important;
+        right: 0 !important;
         visibility: visible;
     }
 
