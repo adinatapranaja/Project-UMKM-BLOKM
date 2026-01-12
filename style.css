@@ -1316,7 +1316,7 @@ img {
     .menu-toggle {
         display: flex !important;
         order: 1;
-        margin-right: auto;
+        margin-right: 100px;
     }
 
     .logo img {
