@@ -1,0 +1,46 @@
+/* Button WhatsApp Mobile - tampil di navbar mobile saja */
+.btn-whatsapp-mobile {
+    display: none;
+    /* Hidden di desktop */
+}
+
+/* Tablet & Mobile - tampilkan button WhatsApp di navbar */
+@media (max-width: 1024px) {
+    .btn-whatsapp-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: #25D366;
+        border-radius: 50%;
+        padding: 10px;
+        order: 3;
+        margin-left: auto;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp-mobile:hover {
+        background: #20BA5A;
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-whatsapp-mobile svg {
+        fill: white;
+    }
+
+    /* Adjust logo order */
+    .logo {
+        order: 2;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Hamburger tetap di kiri */
+    .menu-toggle {
+        order: 1;
+        margin-right: auto;
+    }
+}
