@@ -1186,6 +1186,8 @@ img {
         /* Reset margin */
         z-index: 1001;
         /* Di atas segalanya */
+        pointer-events: none;
+        /* Agar klik tembus ke menu di bawahnya */
     }
 
     .nav-menu {
@@ -1324,7 +1326,9 @@ img {
     .menu-toggle {
         display: flex !important;
         order: 1;
-        margin-right: -20px;
+        margin-bottom: 8px;
+        margin-right: auto;
+        margin-left: -185px;
     }
 
     .logo img {
